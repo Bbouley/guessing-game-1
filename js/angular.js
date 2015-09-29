@@ -30,6 +30,7 @@ app.controller('myController', function($scope) {
 
   $scope.giveUp = function(){
     $scope.done = true;
+    $scope.message = 'You just couldn\'t cut it, could you. You\'re the worst Kind of person. I Hate you.';
   };
 
   $scope.reset = function(){

@@ -17,26 +17,26 @@
 
   <div class = 'row'>
     <div class = 'computerNum' ng-show = 'done'>
-      <h2> Computer Number :{{ computerNum }}</h2>
+      <h2> Computer Number : {{ computerNum }}</h2>
     </div>
 
-    <div class = 'playerGuess form-inline'>
+    <div class = 'playerGuess form-inline' ng-hide = 'done'>
       <h2>Make a guess : </h2>
       <input type = 'number' ng-model = 'guess' class = 'form-inline'>
     </div>
 
     <br>
 
-    <button class = 'btn btn-default' ng-click = 'checkWin()'>
+    <button class = 'btn btn-default' ng-click = 'checkWin()' ng-hide = 'done'>
     <h3>Guess Away...</h3>
     </button>
 
-    <div class = 'guesses'>
+    <div class = 'guesses' ng-hide ='done'>
       <h4>Guesses : {{ guessNumber }}</h4>
     </div>
 
     <div class = 'win' ng-show = 'win'>
-      <h1>You Win</h1>
+      <h1>You got it in {{ guessNumber }} Guesses.</h1>
     </div>
 
     <div class = 'notWin' ng-show = 'lose'>
@@ -47,7 +47,7 @@
       <h2>{{ message }} </h2>
     </div>
 
-    <button class = 'reset btn btn-default' ng-show = 'win' ng-click = 'reset()'>
+    <button class = 'reset btn btn-default' ng-show = 'done' ng-click = 'reset()'>
       <h2>RESET</h2>
     </button>
 
