@@ -1,0 +1,9 @@
+/* add custom styles */
+.giveUp{
+  color: black;
+  background-color: red;
+}
+
+.win{
+  background-color: green;
+}

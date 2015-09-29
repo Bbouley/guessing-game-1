@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en" ng-app='myApp'>
+  <head>
+    <meta charset="utf-8">
+    <title>Untitled</title>
+
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+  </head>
+  <body ng-controller="myController">
+    <!-- sample angular code -->
+    <div class="container text-center">
+
+    <h1> Guess things and stuff</h1>
+    <br><br>
+
+
+  <div class = 'row'>
+    <div class = 'computerNum' ng-show = 'done'>
+      <h2> Computer Number :{{ computerNum }}</h2>
+    </div>
+
+    <div class = 'playerGuess form-inline'>
+      <h2>Make a guess : </h2>
+      <input type = 'number' ng-model = 'guess' class = 'form-inline'>
+    </div>
+
+    <br>
+
+    <button class = 'btn btn-default' ng-click = 'checkWin()'>
+    <h3>Guess Away...</h3>
+    </button>
+
+    <div class = 'guesses'>
+      <h4>Guesses : {{ guessNumber }}</h4>
+    </div>
+
+    <div class = 'win' ng-show = 'win'>
+      <h1>You Win</h1>
+    </div>
+
+    <div class = 'notWin' ng-show = 'lose'>
+      <h2>You Suck!!!</h2>
+    </div>
+
+    <div class = 'message'>
+      <h2>{{ message }} </h2>
+    </div>
+
+    <button class = 'reset btn btn-default' ng-show = 'win' ng-click = 'reset()'>
+      <h2>RESET</h2>
+    </button>
+
+    <button class = 'btn btn-default giveUp' ng-click = 'giveUp()' ng-hide= 'done'>
+      <h2>JUST GIVE UP, LIFE'S NO LONGER WORTH IT. YOU ARE ALSO ADOPTED</h2>
+    </button>
+
+    </div>
+
+    </div>
+
+  <script type="text/javascript" src = 'https://code.jquery.com/jquery-2.1.4.min.js'></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
+    <script type="text/javascript" src="js/angular.js"></script>
+  </body>
+</html>
